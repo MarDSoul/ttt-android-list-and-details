@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="snackbar_action_label">Retry</string>
+    <string name="list_expanded_ic_cd">User description</string>
+    <string name="list_expanded_title">Repos: </string>
+    <string name="details_name_label">Name: </string>
+    <string name="details_no_name">no name</string>
+    <string name="details_location_label">Location: </string>
+    <string name="details_no_location">no location</string>
+    <string name="details_created_at_label">Created at: </string>
+    <string name="details_repos_label">Repos:</string>
+</resources>

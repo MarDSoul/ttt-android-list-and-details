@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Widget.Material3.CardView.Filled"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/medium_pudding">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/list_item_avatar"
+            android:layout_width="@dimen/avatar_list_size"
+            android:layout_height="@dimen/avatar_list_size"
+            android:layout_margin="@dimen/small_pudding"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/list_item_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/list_item_avatar"
+            app:layout_constraintEnd_toStartOf="@id/expanded_details_icon_button"
+            app:layout_constraintStart_toEndOf="@id/list_item_avatar"
+            app:layout_constraintTop_toTopOf="@id/list_item_avatar"
+            tools:text="GitHub login" />
+
+        <ImageButton
+            android:id="@+id/expanded_details_icon_button"
+            style="?attr/materialIconButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/list_expanded_ic_cd"
+            android:src="@drawable/expand_more_ic"
+            app:layout_constraintBottom_toBottomOf="@id/list_item_avatar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/list_item_avatar" />
+
+        <TextView
+            android:id="@+id/repos_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/medium_pudding"
+            android:text="@string/details_repos_label"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/list_item_avatar" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/repos_linear_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/repos_label"
+            tools:visibility="visible" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/repos_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:constraint_referenced_ids="repos_label, repos_linear_layout" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</com.google.android.material.card.MaterialCardView>

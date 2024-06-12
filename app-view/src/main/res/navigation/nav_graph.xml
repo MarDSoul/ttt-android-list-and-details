@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/gitHubListFragment">
+
+    <fragment
+        android:id="@+id/gitHubListFragment"
+        android:name="ttt.mardsoul.list_and_details_view.GitHubListFragment"
+        android:label="fragment_list"
+        tools:layout="@layout/fragment_githublist">
+        <action
+            android:id="@+id/action_listFragment_to_detailsFragment"
+            app:destination="@id/detailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailsFragment"
+        android:name="ttt.mardsoul.list_and_details_view.DetailsFragment"
+        android:label="fragment_details"
+        tools:layout="@layout/fragment_details">
+        <argument
+            android:name="userId"
+            app:argType="integer" />
+        <argument
+            android:name="userLogin"
+            app:argType="string" />
+        <argument
+            android:name="avatarUrl"
+            app:argType="string"
+            app:nullable="true" />
+    </fragment>
+</navigation>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="small_pudding">4.dp</dimen>
+    <dimen name="medium_pudding">8.dp</dimen>
+    <dimen name="large_pudding">16.dp</dimen>
+    <dimen name="avatar_list_size">56.dp</dimen>
+    <dimen name="avatar_detail_size">160.dp</dimen>
+</resources>

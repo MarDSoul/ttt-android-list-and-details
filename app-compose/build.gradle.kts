@@ -1,6 +1,9 @@
 plugins {
 	alias(libs.plugins.android.application)
 	alias(libs.plugins.jetbrains.kotlin.android)
+	alias(libs.plugins.ksp)
+	alias(libs.plugins.hilt)
+	alias(libs.plugins.serialization)
 }
 
 android {
@@ -14,9 +17,18 @@ android {
 		versionCode = 1
 		versionName = "1.0"
 
-		testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 		vectorDrawables {
 			useSupportLibrary = true
+		}
+	}
+
+	signingConfigs {
+		//Use a bundled debug keystore
+		getByName("debug") {
+			storeFile = rootProject.file("debug.keystore")
+			storePassword = "android"
+			keyAlias = "androiddebugkey"
+			keyPassword = "android"
 		}
 	}
 
@@ -27,6 +39,12 @@ android {
 				getDefaultProguardFile("proguard-android-optimize.txt"),
 				"proguard-rules.pro"
 			)
+		}
+		create("benchmark") {
+			initWith(buildTypes.getByName("release"))
+			signingConfig = signingConfigs.getByName("debug")
+			matchingFallbacks += listOf("release")
+			isDebuggable = false
 		}
 	}
 	compileOptions {
@@ -40,7 +58,7 @@ android {
 		compose = true
 	}
 	composeOptions {
-		kotlinCompilerExtensionVersion = "1.5.1"
+		kotlinCompilerExtensionVersion = "1.5.14"
 	}
 	packaging {
 		resources {
@@ -51,6 +69,8 @@ android {
 
 dependencies {
 
+	implementation(project(":share"))
+
 	implementation(libs.androidx.core.ktx)
 	implementation(libs.androidx.lifecycle.runtime.ktx)
 	implementation(libs.androidx.activity.compose)
@@ -59,11 +79,14 @@ dependencies {
 	implementation(libs.androidx.ui.graphics)
 	implementation(libs.androidx.ui.tooling.preview)
 	implementation(libs.androidx.material3)
-	testImplementation(libs.junit)
-	androidTestImplementation(libs.androidx.junit)
-	androidTestImplementation(libs.androidx.espresso.core)
-	androidTestImplementation(platform(libs.androidx.compose.bom))
-	androidTestImplementation(libs.androidx.ui.test.junit4)
+
+	implementation(libs.hilt.android)
+	ksp(libs.hilt.android.compiler)
+	implementation(libs.hilt.navigation.compose)
+	implementation(libs.coil.compose)
+	implementation(libs.navigation.compose)
+	implementation(libs.serialization.jetbrains)
+
 	debugImplementation(libs.androidx.ui.tooling)
 	debugImplementation(libs.androidx.ui.test.manifest)
 }

@@ -22,3 +22,6 @@ dependencyResolutionManagement {
 rootProject.name = "ListAndDetails"
 include(":app-compose")
 include(":app-view")
+include(":share")
+include(":benchmark-compose")
+include(":benchmark-view")
