@@ -70,14 +70,14 @@ class ViewBenchmark {
 		}
 	) {
 		//click on expanded button
-		val userItemSelector = By.clazz("android.widget.ImageButton")
+		val userItemSelector = By.res(packageName, "expanded_details_icon_button")
+		device.wait(Until.hasObject(userItemSelector), 10_000)
 		device.findObject(userItemSelector).click()
 		val repoItemSelector = By.res(packageName, "repo_item_text")
 		device.wait(Until.hasObject(repoItemSelector), 10_000)
 		device.findObject(userItemSelector).click()
 		device.waitForIdle()
 	}
-
 
 	@Test
 	fun clickToDetails() = benchmarkRule.measureRepeated(
@@ -92,11 +92,12 @@ class ViewBenchmark {
 		}
 	) {
 		//click on user
-		val userItemSelector = By.res(packageName, "list_item_text")
+		val userItemSelector = By.res(packageName, "item_card_view")
+		device.wait(Until.hasObject(userItemSelector), 10_000)
 		device.findObject(userItemSelector).click()
 		device.waitForIdle()
 
-		//waiting for details to be loaded11
+		//waiting for details to be loaded
 		val listReposSelector = By.res(packageName, "repos_recycler_view")
 		device.wait(Until.hasObject(listReposSelector), 10_000)
 		val listRepos = device.findObject(listReposSelector)
