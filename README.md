@@ -54,4 +54,4 @@ The app works with [GitHub REST API](https://docs.github.com/en/rest)
 - Coil
 - Benchmark
 
-![Screenshot_20240614_012853.png](screenshots%2FScreenshot_20240614_012853.png)
+<img src="screenshots%2FScreenshot_20240614_012853.png" width=25% height=25%>
