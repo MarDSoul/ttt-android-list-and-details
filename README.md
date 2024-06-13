@@ -53,3 +53,5 @@ The app works with [GitHub REST API](https://docs.github.com/en/rest)
 - Retrofit
 - Coil
 - Benchmark
+
+![Screenshot_20240614_012853.png](screenshots%2FScreenshot_20240614_012853.png)
