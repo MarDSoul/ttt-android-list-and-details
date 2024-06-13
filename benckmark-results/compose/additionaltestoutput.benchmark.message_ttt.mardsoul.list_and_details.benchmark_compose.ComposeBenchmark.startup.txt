@@ -1,0 +1,4 @@
+
+ComposeBenchmark_startup
+timeToInitialDisplayMs   [min 1 021,3](file://ComposeBenchmark_startup_iter000_2024-06-13-13-32-09.perfetto-trace),   [median 1 048,0](file://ComposeBenchmark_startup_iter001_2024-06-13-13-32-16.perfetto-trace),   [max 1 092,8](file://ComposeBenchmark_startup_iter002_2024-06-13-13-32-23.perfetto-trace)
+Traces: Iteration [0](file://ComposeBenchmark_startup_iter000_2024-06-13-13-32-09.perfetto-trace) [1](file://ComposeBenchmark_startup_iter001_2024-06-13-13-32-16.perfetto-trace) [2](file://ComposeBenchmark_startup_iter002_2024-06-13-13-32-23.perfetto-trace)

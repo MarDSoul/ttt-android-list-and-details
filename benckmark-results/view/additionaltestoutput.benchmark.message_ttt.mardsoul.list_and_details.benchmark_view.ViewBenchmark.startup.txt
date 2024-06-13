@@ -1,0 +1,4 @@
+
+ViewBenchmark_startup
+timeToInitialDisplayMs   [min 743,7](file://ViewBenchmark_startup_iter002_2024-06-13-13-27-46.perfetto-trace),   [median 769,5](file://ViewBenchmark_startup_iter001_2024-06-13-13-27-40.perfetto-trace),   [max 772,5](file://ViewBenchmark_startup_iter001_2024-06-13-13-27-40.perfetto-trace)
+Traces: Iteration [0](file://ViewBenchmark_startup_iter000_2024-06-13-13-27-33.perfetto-trace) [1](file://ViewBenchmark_startup_iter001_2024-06-13-13-27-40.perfetto-trace) [2](file://ViewBenchmark_startup_iter002_2024-06-13-13-27-46.perfetto-trace)

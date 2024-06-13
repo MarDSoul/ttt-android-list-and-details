@@ -1,0 +1,5 @@
+
+ComposeBenchmark_scrollReposList
+frameDurationCpuMs   P50     13,2,   P90     17,9,   P95     18,8,   P99     22,9
+frameOverrunMs       P50      6,1,   P90     16,3,   P95     18,8,   P99     23,6
+Traces: Iteration [0](file://ComposeBenchmark_scrollReposList_iter000_2024-06-13-13-31-28.perfetto-trace) [1](file://ComposeBenchmark_scrollReposList_iter001_2024-06-13-13-31-38.perfetto-trace) [2](file://ComposeBenchmark_scrollReposList_iter002_2024-06-13-13-31-48.perfetto-trace)

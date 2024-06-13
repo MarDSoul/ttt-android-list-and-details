@@ -1,0 +1,5 @@
+
+ComposeBenchmark_clickOnExpandedButton
+frameDurationCpuMs   P50  16,1,   P90  42,1,   P95  50,6,   P99  61,4
+frameOverrunMs       P50   9,1,   P90  55,7,   P95  61,9,   P99  72,8
+Traces: Iteration [0](file://ComposeBenchmark_clickOnExpandedButton_iter000_2024-06-13-13-34-07.perfetto-trace) [1](file://ComposeBenchmark_clickOnExpandedButton_iter001_2024-06-13-13-34-12.perfetto-trace) [2](file://ComposeBenchmark_clickOnExpandedButton_iter002_2024-06-13-13-34-17.perfetto-trace)

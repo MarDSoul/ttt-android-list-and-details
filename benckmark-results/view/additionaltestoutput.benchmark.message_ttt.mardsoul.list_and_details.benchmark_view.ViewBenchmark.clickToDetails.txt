@@ -1,0 +1,5 @@
+
+ViewBenchmark_clickToDetails
+frameDurationCpuMs   P50      8,1,   P90      9,8,   P95     12,4,   P99     57,8
+frameOverrunMs       P50      0,6,   P90      8,0,   P95  1 682,9,   P99  2 688,3
+Traces: Iteration [0](file://ViewBenchmark_clickToDetails_iter000_2024-06-13-13-28-04.perfetto-trace) [1](file://ViewBenchmark_clickToDetails_iter001_2024-06-13-13-28-11.perfetto-trace) [2](file://ViewBenchmark_clickToDetails_iter002_2024-06-13-13-28-20.perfetto-trace)
